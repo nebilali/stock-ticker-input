@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from collections import namedtuple
-from backend.py import get_graph, get_data
+from backend import get_graph, get_data
 
 app = Flask(__name__)
 
