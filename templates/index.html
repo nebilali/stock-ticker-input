@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Hello, World!</title>
+		<title>Stock Data</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -12,13 +12,15 @@
 			<div>
 	  			<h1>User Input</h1>
 			</div>
-			<h2>Please enter as stock ticker eg. GOOG, and check desired features.</h2>
+			<h5>Please enter as stock ticker eg. GOOG, and check desired features.</h2>
 			<form action="inputs">
-				Ticker Symbol: <input type="text" name="tckr" value="i.e.AAPL"><br>
-				<input type="checkbox" name="cp" value="Closing Price"><br>
-				<input type="checkbox" name="acp" value="Adjusted Closing Price"><br>
-				<input type="checkbox" name="op" value="Opening Price"><br>
-				<input type="checkbox" name"aop" value="Adjusted Opening Price"><br>
+				Ticker Symbol: <input type="text" name="tckr" placeholder="i.e.AAPL"><br>
+				<div>
+					<input type="checkbox" name="cp">Closing Price<br>
+					<input type="checkbox" name="acp">Adjusted Closing Price<br>
+					<input type="checkbox" name="op">Opening Price<br>
+					<input type="checkbox" name"aop">Adjusted Opening Price<br>
+				</div>
 				<input type="submit" value="Submit">
 			</form>
 		</div>
