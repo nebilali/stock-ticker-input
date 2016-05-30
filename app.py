@@ -12,18 +12,24 @@ def main():
 def index():
 	return render_template('index.html')
 
-@app.route('/graph', methods=['Get', 'Post'])
+@app.route('/graph', methods=['Post'])
 def graph():
-	cp = requests.form['cp']
-	acp = requests.form['acp']
-	op = requests.form['op']
-	aop = requests.form['aop']
+	print request.form
+
+	# cp = None
+	# acp = None
+	# op = None
+	# aop = None
+
+	cp = request.form.get('cp')
+	acp = request.form.get('acp')
+	op = request.form.get('op')
+	aop = request.form.get('aop')
 	Checkboxes = namedtuple('Checkboxes', 'cp acp op aop')
 	cb = Checkboxes(cp=cp, acp=acp, op=op, aop=aop)
-	ticker_name = requests.form['tckr']
-
+	ticker_name = request.form.get('tckr')
 	script, div = get_graph(get_data(ticker_name), cb, ticker_name)
-	return render_template('graph.html', graph_div=div, graph_script=script, ticker=ticker_name)
+	return render_template('graph.html', graph_div=div, graph_script=script, ticker=ticker_name.upper())
 
 if __name__ == '__main__':
-	app.run(port=33507)
+	app.run(debug=True, port=33507)

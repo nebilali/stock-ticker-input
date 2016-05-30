@@ -6,7 +6,11 @@
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		{{graph_script}}
+
+                <link href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.css" rel="stylesheet" type="text/css">
+                <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.js"></script>
+                {{ graph_script|safe }}
+
         </head>
         <body>
                 <div>
@@ -14,7 +18,7 @@
                                 <h2>Generate Graph for {{ticker}}</h1>
 				<a href="{{url_for('index')}}"><h3>back</h3></a>
                         </div>
-			{{graph_div}}
+			{{ graph_div|safe }}
                 </div>
         </body>
 </html>
