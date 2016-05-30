@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from collections import namedtuple
+from backend.py import get_graph, get_data
 
 app = Flask(__name__)
 
@@ -21,8 +22,8 @@ def graph():
 	cb = Checkboxes(cp=cp, acp=acp, op=op, aop=aop)
 	ticker_name = requests.form['tckr']
 
-	div, script = get_graph(get_data(ticker_name), cb, ticker_name)
-	return render_template('graph.html', graph_div=div, graph_script=script, tckr=ticker_name)
+	script, div = get_graph(get_data(ticker_name), cb, ticker_name)
+	return render_template('graph.html', graph_div=div, graph_script=script, ticker=ticker_name)
 
 if __name__ == '__main__':
 	app.run(port=33507)
