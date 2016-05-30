@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8">
+                <title>Stock Data Graph</title>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        </head>
+        <body>
+                <div>
+                        <div>
+                                <h2>Generate Graph for {{ticker}}</h1>
+				<a href="{{url_for('index')}}">back</a>
+                        </div>
+			{{graph_div}}
+                </div>
+        </body>
+</html>
+
+{{graph_script}}
