@@ -9,7 +9,18 @@
 	</head>
 	<body>
 		<div>
-  			<h1>Hello, World!</h1>
+			<div>
+	  			<h1>User Input</h1>
+			</div>
+			<h2>Please enter as stock ticker eg. GOOG, and check desired features.</h2>
+			<form action="inputs">
+				Ticker Symbol: <input type="text" name="tckr" value="i.e.AAPL"><br>
+				<input type="checkbox" name="cp" value="Closing Price"><br>
+				<input type="checkbox" name="acp" value="Adjusted Closing Price"><br>
+				<input type="checkbox" name="op" value="Opening Price"><br>
+				<input type="checkbox" name"aop" value="Adjusted Opening Price"><br>
+				<input type="submit" value="Submit">
+			</form>
 		</div>
 	</body>
 </html>
